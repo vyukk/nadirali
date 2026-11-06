@@ -46,12 +46,26 @@
 
 @media (max-width: 1024px) {
   :root {
-    --header-height: 80px;
+    --header-height: 96px;
   }
 }
 
 main {
   padding-top: var(--header-height);
+}
+
+.site-main {
+  padding-top: 96px !important;
+}
+
+.hero-content {
+  padding-inline: 1rem !important;
+}
+
+@media (min-width: 768px) {
+  .hero-content {
+    padding-inline: 1.5rem !important;
+  }
 }
 
 .site-header,
@@ -66,6 +80,25 @@ main {
   background-image: none !important;
 }
 
+.site-header nav[aria-label="Main"] [class*="rounded-2xl"] p,
+.site-header nav[aria-label="Main"] [class*="bg-amber-200/10"],
+.site-header nav[aria-label="Main"] [class*="bg-amber-200"] {
+  display: none !important;
+}
+
+.site-header nav[aria-label="Main"] [class*="rounded-2xl"] div[class*="border-t"] {
+  display: none !important;
+}
+
+@media (min-width: 1024px) {
+  .site-header nav[aria-label="Main"] > a,
+  .site-header nav[aria-label="Main"] > div > button {
+    display: inline-flex;
+    align-items: center;
+    padding-inline: 0.875rem !important;
+  }
+}
+
 .catalog-button {
   background-color: #d4af37 !important;
   color: #000 !important;
@@ -74,6 +107,66 @@ main {
 .catalog-button:hover {
   background-color: #c49f27 !important;
   color: #000 !important;
+}
+
+.spec-tile {
+  min-width: 0;
+  padding: 1rem !important;
+  overflow: hidden;
+}
+
+.spec-tile-value {
+  min-width: 0;
+  overflow-wrap: anywhere;
+}
+
+.spec-badge {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.125rem 0.625rem !important;
+  white-space: nowrap;
+}
+
+.hero-primary-cta {
+  background-color: #d4af37 !important;
+  color: #000 !important;
+}
+
+.hero-primary-cta:hover {
+  background-color: #c49f27 !important;
+  color: #000 !important;
+}
+
+.hero-secondary-cta {
+  color: #fff !important;
+}
+
+@media (max-width: 640px) {
+  .container,
+  .container-wide {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  .hero-primary-cta,
+  .hero-secondary-cta {
+    min-height: 44px;
+  }
+
+  input,
+  select,
+  textarea,
+  button {
+    font-size: 16px;
+  }
+
+  .prose,
+  p,
+  li,
+  td,
+  th {
+    overflow-wrap: anywhere;
+  }
 }
 
 html {

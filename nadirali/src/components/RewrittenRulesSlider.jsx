@@ -97,10 +97,10 @@ export default function RewrittenRulesSlider() {
 
         {/* Slide Display Area */}
         <div className="relative overflow-hidden rounded-2xl border border-stone-200/80 bg-white p-6 lg:p-10 shadow-md">
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+          <div className="grid min-w-0 grid-cols-1 lg:grid-cols-12 gap-8 items-center">
             
             {/* Left Description */}
-            <div className="lg:col-span-5 flex flex-col gap-4">
+            <div className="min-w-0 lg:col-span-5 flex flex-col gap-4">
               <span className="text-xs font-mono uppercase tracking-wider text-[#371506]/60">
                 Heritage Landmark 0{activeSlide + 1} of 05
               </span>
@@ -128,11 +128,11 @@ export default function RewrittenRulesSlider() {
             </div>
 
             {/* Right Photo Preview */}
-            <div className="lg:col-span-7 flex justify-center items-center rounded-xl bg-[#fdfaf8] p-4 sm:p-6 border border-stone-200/50">
+            <div className="min-w-0 w-full overflow-hidden lg:col-span-7 flex justify-center items-center rounded-xl bg-[#fdfaf8] p-4 sm:p-6 border border-stone-200/50">
               <img
                 src={current.image}
                 alt={current.title}
-                className="max-h-[420px] w-auto max-w-full rounded-lg object-contain shadow-sm transition-all duration-300"
+                className="block h-[min(420px,70vw)] w-full max-w-full rounded-lg object-contain shadow-sm transition-all duration-300"
                 loading="lazy"
               />
             </div>

@@ -115,16 +115,16 @@ export default function CraftsmanshipCards() {
                       <span className="text-xs font-mono uppercase tracking-wider text-white/50">
                         Workshop Benchmark Spec
                       </span>
-                      <span className="rounded-full bg-[#371506] px-2.5 py-0.5 text-xs font-medium text-[#D4AF37] border border-[#D4AF37]/20">
+                      <span className="spec-badge rounded-full bg-[#371506] px-2.5 py-0.5 text-xs font-medium text-[#D4AF37] border border-[#D4AF37]/20">
                         Acoustic Standard
                       </span>
                     </div>
 
                     <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
                       {item.specs.map((s, i) => (
-                        <div key={i} className="rounded-xl border border-white/5 bg-white/[0.02] p-4">
+                        <div key={i} className="spec-tile rounded-xl border border-white/5 bg-white/[0.02] p-4">
                           <p className="text-xs text-white/40">{s.label}</p>
-                          <p className="text-sm sm:text-base font-serif font-medium text-stone-100 mt-1">
+                          <p className="spec-tile-value text-sm sm:text-base font-serif font-medium text-stone-100 mt-1">
                             {s.val}
                           </p>
                         </div>

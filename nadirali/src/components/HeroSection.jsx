@@ -1,11 +1,9 @@
-import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
 import { ArrowRight, Award } from 'lucide-react'
 import heroInstruments from '../data/heroData'
 
-export default function HeroSection({ onRequestCatalog }) {
-  const [selectedIdx, setSelectedIdx] = useState(0)
-  const current = heroInstruments[selectedIdx]
+export default function HeroSection() {
+  const current = heroInstruments[0]
 
   return (
     <section data-section-theme="dark" className="relative overflow-clip pt-0 pb-0 bg-[#0c0a09]">
@@ -14,7 +12,7 @@ export default function HeroSection({ onRequestCatalog }) {
           <div className="relative mx-auto flex w-full flex-col overflow-visible rounded-none md:block md:min-h-[580px] md:overflow-hidden md:rounded-2xl lg:min-h-[660px] xl:min-h-[720px] transition-all duration-300 border border-white/[0.06] shadow-2xl">
             
             {/* Left Content Container */}
-            <div className="container container-no-padding-mobile relative z-10 order-1 flex min-w-0 flex-col justify-center bg-transparent pt-10 pb-6 md:absolute md:inset-0 md:order-0 md:py-0">
+            <div className="container hero-content relative z-10 order-1 flex min-w-0 flex-col justify-center bg-transparent pt-10 pb-6 md:absolute md:inset-0 md:order-0 md:py-0">
               <div className="flex w-full min-w-0 max-w-[620px] flex-col gap-6 md:max-w-[460px] lg:max-w-[620px] lg:gap-8">
                 
                 {/* GI Tag Eyebrow Banner */}
@@ -52,7 +50,7 @@ export default function HeroSection({ onRequestCatalog }) {
                 <div className="flex flex-wrap items-center gap-3 pt-2">
                   <Link
                     to="/product-category/trumpet/"
-                    className="group relative inline-flex items-center gap-2 justify-center cursor-pointer appearance-none overflow-hidden rounded-lg py-3 px-5 text-center whitespace-nowrap select-none transition-all duration-200 bg-[#D4AF37] hover:bg-[#c49f27] active:scale-[0.98] text-black font-semibold text-[14px] shadow-lg shadow-[#D4AF37]/15"
+                    className="hero-primary-cta group relative inline-flex items-center gap-2 justify-center cursor-pointer appearance-none overflow-hidden rounded-lg py-3 px-5 text-center whitespace-nowrap select-none transition-all duration-200 bg-[#D4AF37] hover:bg-[#c49f27] active:scale-[0.98] text-black font-semibold text-[14px] shadow-lg shadow-[#D4AF37]/15"
                   >
                     <span>Explore The Collection</span>
                     <ArrowRight className="size-4 transition-transform group-hover:translate-x-0.5" />
@@ -60,39 +58,17 @@ export default function HeroSection({ onRequestCatalog }) {
 
                   <Link
                     to="/nadir-ali-2/"
-                    className="group relative inline-flex items-center gap-2 justify-center cursor-pointer appearance-none overflow-hidden rounded-lg py-3 px-5 text-center whitespace-nowrap select-none transition-all duration-200 bg-white/5 text-white border border-stone-200/30 hover:bg-[#371506] hover:border-[#D4AF37]/50 active:scale-[0.98] font-medium text-[14px]"
+                    className="hero-secondary-cta group relative inline-flex items-center gap-2 justify-center cursor-pointer appearance-none overflow-hidden rounded-lg py-3 px-5 text-center whitespace-nowrap select-none transition-all duration-200 bg-white/5 text-white border border-stone-200/30 hover:bg-[#371506] hover:border-[#D4AF37]/50 active:scale-[0.98] font-medium text-[14px]"
                   >
                     <span>Our 140-Year Heritage</span>
                   </Link>
-                </div>
-
-                {/* Interactive Instrument Switcher */}
-                <div className="pt-2">
-                  <span className="text-[11px] font-mono uppercase tracking-wider text-white/40 block mb-2">
-                    Featured Handcrafted Instruments:
-                  </span>
-                  <div className="flex flex-wrap gap-1.5">
-                    {heroInstruments.map((item, idx) => (
-                      <button
-                        key={item.id}
-                        onClick={() => setSelectedIdx(idx)}
-                        className={`text-xs px-2.5 py-1 rounded-md transition-all cursor-pointer font-medium ${
-                          selectedIdx === idx
-                            ? 'bg-[#D4AF37] text-black shadow-sm font-semibold'
-                            : 'bg-white/5 text-white/60 hover:text-white hover:bg-white/10 border border-transparent'
-                        }`}
-                      >
-                        {item.label}
-                      </button>
-                    ))}
-                  </div>
                 </div>
 
               </div>
             </div>
 
             {/* Right Side: High-Resolution Heritage Instrument Photography */}
-            <div className="relative z-0 order-2 w-screen max-w-[100vw] shrink-0 -translate-x-1/2 left-1/2 md:w-full md:max-w-none md:translate-x-0 max-md:-mt-4 md:absolute md:inset-0 md:order-0 md:h-full md:min-h-0">
+            <div className="hidden relative z-0 order-2 w-screen max-w-[100vw] shrink-0 -translate-x-1/2 left-1/2 md:w-full md:max-w-none md:translate-x-0 max-md:-mt-4 md:absolute md:inset-0 md:order-0 md:h-full md:min-h-0">
               
               {/* Mobile top gradient */}
               <div

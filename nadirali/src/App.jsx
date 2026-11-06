@@ -55,7 +55,7 @@ function AppLayout() {
       <Header onRequestCatalog={handleOpenCatalog} />
 
       {/* Main Content Area */}
-      <main className="flex-1">
+      <main className="site-main flex-1">
         <Routes>
           <Route path="/" element={<HomePage onRequestCatalog={handleOpenCatalog} />} />
           <Route path="/nadir-ali-2/" element={<AboutUsPage onRequestCatalog={handleOpenCatalog} />} />

@@ -327,7 +327,7 @@ export default function Header({ onRequestCatalog }) {
 
       {/* Mobile Drawer Menu */}
       {mobileMenuOpen && (
-        <div className="fixed inset-0 top-[60px] z-40 bg-[#0c0a09] lg:hidden overflow-y-auto px-6 py-6 animate-fadeIn border-t border-white/10 flex flex-col justify-between">
+        <div className="fixed inset-0 top-[80px] z-40 bg-[#0c0a09] lg:hidden overflow-y-auto px-4 py-5 animate-fadeIn border-t border-white/10 flex flex-col justify-between">
           <div className="space-y-6">
             
             {/* Quick Categories */}
